@@ -1,5 +1,6 @@
 package skladiste;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import magacin.Artikal;
@@ -7,6 +8,10 @@ import magacin.Artikal;
 public class Magacin implements IMagacin {
 	
 	private List<Artikal> zalihe;
+	
+	public Magacin() {
+		zalihe = new ArrayList<>();
+	}
 
 
 	@Override
