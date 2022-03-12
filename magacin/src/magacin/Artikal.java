@@ -1,5 +1,7 @@
 package magacin;
 
+import java.util.Objects;
+
 public abstract class Artikal {
 	protected int sifra;
 	protected String naziv;
@@ -28,6 +30,25 @@ public abstract class Artikal {
 	}
 	public void setKolicina(int kolicina) {
 		this.kolicina = kolicina;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(naziv, sifra);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Artikal other = (Artikal) obj;
+		return Objects.equals(naziv, other.naziv) && sifra == other.sifra;
+	}
+	@Override
+	public String toString() {
+		return "Artikal [naziv=" + naziv + "]";
 	}
 	
 	
