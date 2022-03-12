@@ -7,6 +7,16 @@ public abstract class Artikal {
 	protected String naziv;
 	protected String opis;
 	protected int kolicina;
+	
+	
+	
+	public Artikal(int sifra, String naziv, String opis, int kolicina) {
+		super();
+		this.sifra = sifra;
+		this.naziv = naziv;
+		this.opis = opis;
+		this.kolicina = kolicina;
+	}
 	public int getSifra() {
 		return sifra;
 	}
