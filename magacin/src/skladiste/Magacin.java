@@ -10,7 +10,15 @@ public class Magacin implements IMagacin {
 
 	@Override
 	public void dodajUMagacin(Artikal artikal) {
-		// TODO Auto-generated method stub
+		if(zalihe.contains(artikal)) {
+			for (Artikal artikalSaZaliha : zalihe) {
+				if(artikalSaZaliha.equals(artikal)) {
+					artikalSaZaliha.setKolicina(artikalSaZaliha.getKolicina()+artikal.getKolicina());
+				}
+			}
+		}else {
+			zalihe.add(artikal);
+		}
 
 	}
 
