@@ -1,8 +1,12 @@
 package skladiste;
 
+import java.util.List;
+
 import magacin.Artikal;
 
 public class Magacin implements IMagacin {
+	
+	private List<Artikal> zalihe;
 
 	@Override
 	public void dodajUMagacin(Artikal artikal) {
